@@ -62,7 +62,7 @@ extension TransfersViewController: TransferViewDelegate {
     }
 
     func didPressTransferButton(with amount: String) {
-        let confirmationViewController = confirmation.make(amount: amount)
+        let confirmationViewController = confirmation.make(with: amount)
         let navigationController = UINavigationController(rootViewController: confirmationViewController)
         self.present(navigationController, animated: true)
     }

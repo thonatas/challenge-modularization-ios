@@ -25,6 +25,8 @@ target 'SampleApp' do
   project 'SampleApp/SampleApp'
   pod 'Home', :path => './'
   pod 'HomeAssembly', :path => '../HomeAssembly'
+  pod 'ActivityDetails', :path => '../../ActivityDetails/ActivityDetails'
+  pod 'ActivityDetailsAssembly', :path => '../../ActivityDetails/ActivityDetailsAssembly'
 
   # DI
   pod 'Swinject', '~> 2.0'
