@@ -3,8 +3,8 @@
 //  ConfirmationInterface
 //
 
-import Foundation
+import UIKit
 
 public protocol ConfirmationInterface {
-    func helloWorld() -> String
+    func make(with amount: String) -> UIViewController
 }

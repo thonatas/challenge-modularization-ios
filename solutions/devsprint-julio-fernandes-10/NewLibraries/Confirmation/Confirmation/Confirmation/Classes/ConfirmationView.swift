@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-public protocol ConfirmationViewDelegate: AnyObject {
+protocol ConfirmationViewDelegate: AnyObject {
 
     func didPressConfirmationButton()
 }
 
-public class ConfirmationView: UIView {
+class ConfirmationView: UIView {
 
-    public weak var delegate: ConfirmationViewDelegate?
+    weak var delegate: ConfirmationViewDelegate?
 
     private let stackView: UIStackView = {
 
@@ -57,7 +57,7 @@ public class ConfirmationView: UIView {
         return button
     }()
 
-    public init() {
+    init() {
         super.init(frame: .zero)
 
         backgroundColor = .white

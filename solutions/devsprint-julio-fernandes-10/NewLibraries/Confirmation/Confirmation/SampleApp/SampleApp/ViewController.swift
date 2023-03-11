@@ -5,7 +5,6 @@
 
 import UIKit
 import Swinject
-import Confirmation
 import ConfirmationInterface
 import ConfirmationAssembly
 
@@ -26,8 +25,7 @@ final class ViewController: UIViewController {
         super.viewDidAppear(animated)
         title = "Sample App"
         
-        let alert = UIAlertController(title: "Confirmation", message: service?.helloWorld(), preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        guard let service = service else { return }
+        show(service.make(with: "0.00"), sender: self)
     }
 }
